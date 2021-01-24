@@ -11,18 +11,16 @@ import (
 
 func insertionSort2(n int32, arr []int32) {
     if n > 1 {
-        var i, j,elem int32   
-        i = 1
-        for i < n {
+        var j,elem int32   
+        for i:= 1; int32(i) < n; i ++ {
             elem = arr[i] 
-            j = i - 1
+            j = int32(i) - 1
             for j >= 0 && arr[j] > elem {
                 arr[j+1] = arr[j]
                 j = j - 1
             }
             arr[j + 1] = elem
             printArray(arr)
-            i = i + 1
         }
 
     } else {
